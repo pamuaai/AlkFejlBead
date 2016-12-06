@@ -29,6 +29,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         {% if currentUser %}
+          <li><a href="/task/create">New task</a></li>
           <li><a href="/user/{{ currentUser.id }}">Hi {{ currentUser.username }}</a></li>
           <li><a href="/logout">Sign out</a></li>
         {% else %}

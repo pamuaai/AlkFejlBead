@@ -48,7 +48,7 @@ class TaskController {
 
 
             if(task.assignUser !== "-1"){
-                yield task.assignees().attach([task.assignUser])
+                yield task.assignees().attach([taskData.assignUser])
             }
         }
 
@@ -84,7 +84,7 @@ class TaskController {
                 .with({ errors: validation.messages() })
                 .flash()
         } else {
-            newTask.creator_id = 1
+            newTask.creator_id = req.currentUser.id
             newTask.category_id = taskData.category_id
             newTask.title = taskData.title
             newTask.description = taskData.description

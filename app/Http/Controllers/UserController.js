@@ -22,15 +22,20 @@ class UserController {
         try {
             yield req.auth.attempt(email, password)
             // oké volt
-            res.redirect('/dashboard')
+            res.redirect(`/user/${req.currentUser.id}`)
         } catch (ex) {
             // gond volt
             yield req
                 .with({ error: 'Rossz belépési adatok.' })
                 .flash()
             
-            res.redirect('/')
+            res.redirect(`/login`)
         } 
+    }
+
+    * doLogout (req, res){
+        yield req.auth.logout()
+        res.redirect(`/`)
     }
 
     * doRegister (req, res) {
