@@ -1,0 +1,54 @@
+{% extends 'master' %}
+
+{% block content %}
+<div class="page-header">
+
+  {% if old('errors') %}
+  <div class="alert alert-danger">
+    <ul>
+      {% for error in old('errors') %}
+        <li>{{ error.message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <form method="post" action="/task/{{ task.id }}/edit">
+    {{ csrfField }}
+    <h1><input name="title" type="text" value="{{ task.title }}"><small> Created by: {{ task.creator.username }} </small></h1>
+    <label for="category_id">Category:</label>
+    <select name="category_id">
+      {% for category in categories %}
+        {% if category.id == task.category_id %}
+          <option value="{{ category.id }}" selected>{{ category.name }}</option>
+        {% else %}
+          <option value="{{ category.id }}">{{ category.name }}</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+    <div>
+      <label for="status">Is it done yet?</label>
+      <input type="checkbox" name="status">
+    </div>
+    <label for="description" style="display: block;">Description:</label>
+    <input name="description" type="text" value="{{ task.description }}" style="width: 500px;">
+    <div class="list-group" style="width: 600px; margin: 15px 0;">
+        <a href="#" class="list-group-item active">
+            Users assigned:
+        </a>
+        {% for user in assignees %}
+            <a href="/user/{{ user.id }}" class="list-group-item">{{ user.username }}</a>
+        {% endfor %}
+    </div>
+
+    <select name="addUser" >
+      {% for user in usersNotAssigned %}
+          <option><a href="#">{{ user.username }}</a></option>
+      {% endfor %}
+    </select>
+
+    <input type="submit" value="Mehet" style="display: block; margin: 5px 0;">
+  </form>
+</div>
+
+{% endblock %}

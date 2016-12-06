@@ -1,0 +1,31 @@
+{% extends 'master' %}
+
+{% block content %}
+<div class="page-header">
+
+  {% if old('errors') %}
+  <div class="alert alert-danger">
+    <ul>
+      {% for error in old('errors') %}
+        <li>{{ error.message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+    <h1>{{ user.username }}<small> Email: {{ user.email }} </small></h1>
+
+
+    <div class="list-group">
+        <a href="#" class="list-group-item active">
+            {{ user.username }}'s tasks:
+        </a>
+        
+        {% for task in tasks %}
+            <a href="/task/{{ task.id }}" class="list-group-item">{{ task.title }}</a>
+        {% endfor %}
+    </div>
+  
+</div>
+
+{% endblock %}

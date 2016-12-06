@@ -16,6 +16,22 @@
 */
 
 const Route = use('Route') 
-Route.get('/', 'TaskController.hello')
+Route.get('/', 'UserController.login')
+
+Route.get('/register', 'UserController.register')
+Route.post('/register', 'UserController.doRegister')
+Route.get('/login', 'UserController.login')
+Route.post('/login', 'UserController.doLogin')
+Route.get('/logout', 'UserController.doLogout')
+
+
+
+Route.get('/user/:id', 'UserController.profile')
+
+
+Route.get('/task/create', 'TaskController.create')
+Route.post('/task/create', 'TaskController.doCreate')
+Route.get('/task/:id', 'TaskController.show')
+Route.post('/task/:id/edit', 'TaskController.doEdit')
 // Route.on('/').render('welcome')
  

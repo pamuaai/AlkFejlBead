@@ -32,7 +32,8 @@ module.exports = {
     connection: {
       filename: Helpers.databasePath('development.sqlite')
     },
-    useNullAsDefault: true
+    useNullAsDefault: true,
+    debug: true
   },
 
   /*
@@ -74,5 +75,4 @@ module.exports = {
       database: Env.get('DB_DATABASE', 'adonis')
     }
   }
-
 }
