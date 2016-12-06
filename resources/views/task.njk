@@ -41,9 +41,10 @@
         {% endfor %}
     </div>
 
-    <select name="addUser" >
+    <select name="assignUser" >
+          <option value="-1">Assign user to this task</option>
       {% for user in usersNotAssigned %}
-          <option><a href="#">{{ user.username }}</a></option>
+          <option value="{{ user.id }}">{{ user.username }}</option>
       {% endfor %}
     </select>
 

@@ -12,7 +12,7 @@ class TaskController {
         const categories = yield Category.all()
         const assignees = yield task.assignees().fetch()
         //const allUsers = yield User.all()
-        const usersNotAssigned = yield User.query().where(.......)
+        const usersNotAssigned = yield User.query().whereNotIn('id', assignees.toJSON().map(user => user.id)).fetch()
         yield res.sendView('task', {
             task: task.toJSON(),
             categories: categories.toJSON(),
@@ -45,6 +45,11 @@ class TaskController {
             task.title = taskData.title
             task.description = taskData.description
             yield task.save()
+
+
+            if(task.assignUser !== "-1"){
+                yield task.assignees().attach([task.assignUser])
+            }
         }
 
         res.redirect(`/task/${taskId}`)
