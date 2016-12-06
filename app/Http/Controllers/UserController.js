@@ -12,6 +12,9 @@ class UserController {
     }
 
     * login (req, res) {
+        if(req.currentUser){
+            yield res.redirect(`/user/${req.currentUser.id}`)
+        }
         yield res.sendView('login')
     }
 

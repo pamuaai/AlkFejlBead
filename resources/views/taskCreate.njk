@@ -15,7 +15,7 @@
 
   <form method="post" action="/task/create">
     {{ csrfField }}
-    <h1><input name="title" type="text" value="Task Title goes here"></h1>
+    <h1><input name="title" type="text" value="Task Title goes here" style="padding: 5px"></h1>
     <label for="category_id">Category:</label>
     <select name="category_id">
       {% for category in categories %}
