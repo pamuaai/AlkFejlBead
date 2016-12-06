@@ -24,6 +24,8 @@ Route.get('/login', 'UserController.login')
 Route.post('/login', 'UserController.doLogin')
 Route.get('/logout', 'UserController.doLogout')
 
+Route.get('/category/create', 'CategoryController.create')
+Route.post('/category/create', 'CategoryController.doCreate')
 
 
 Route.get('/user/:id', 'UserController.profile')
