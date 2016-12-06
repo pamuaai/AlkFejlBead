@@ -89,10 +89,19 @@ class TaskController {
             newTask.title = taskData.title
             newTask.description = taskData.description
             yield newTask.save()
+            yield newTask.assignees().attach([req.currentUser.id])
         }
 
         res.redirect(`/task/${newTask.id}`)
 
+    }
+
+    * doDelete (req, res) {
+        const task = yield Task.find(req.param('id'))
+
+        yield task.delete()
+
+        res.redirect(`/user/${req.currentUser.id}`)
     }
 
 

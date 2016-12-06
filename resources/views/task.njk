@@ -41,14 +41,17 @@
         {% endfor %}
     </div>
 
-    <select name="assignUser" >
+    <select name="assignUser" style="display:block; margin-bottom: 15px;">
           <option value="-1">Assign user to this task</option>
       {% for user in usersNotAssigned %}
           <option value="{{ user.id }}">{{ user.username }}</option>
       {% endfor %}
     </select>
 
-    <input type="submit" value="Mehet" style="display: block; margin: 5px 0;">
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="submit" class="btn btn-success">Mehet</button>
+        <a href="/task/{{ task.id }}/delete"> <button type="button" class="btn btn-danger">Delete task</button></a>
+    </div>
   </form>
 </div>
 

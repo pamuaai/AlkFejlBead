@@ -23,17 +23,21 @@ Route.post('/register', 'UserController.doRegister')
 Route.get('/login', 'UserController.login')
 Route.post('/login', 'UserController.doLogin')
 Route.get('/logout', 'UserController.doLogout')
+Route.get('/user/:id', 'UserController.profile')
 
 Route.get('/category/create', 'CategoryController.create')
 Route.post('/category/create', 'CategoryController.doCreate')
 
-
-Route.get('/user/:id', 'UserController.profile')
+Route.get('/category/list', 'CategoryController.list')
+Route.get('/category/:id', 'CategoryController.show')
+Route.post('/category/:id', 'CategoryController.doEdit')
+Route.get('/category/:id/delete', 'CategoryController.doDelete')
 
 
 Route.get('/task/create', 'TaskController.create')
 Route.post('/task/create', 'TaskController.doCreate')
 Route.get('/task/:id', 'TaskController.show')
 Route.post('/task/:id/edit', 'TaskController.doEdit')
+Route.get('/task/:id/delete', 'TaskController.doDelete')
 // Route.on('/').render('welcome')
  

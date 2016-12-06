@@ -1,0 +1,28 @@
+{% extends 'master' %}
+
+{% block content %}
+<div class="page-header">
+
+  {% if old('errors') %}
+  <div class="alert alert-danger">
+    <ul>
+      {% for error in old('errors') %}
+        <li>{{ error.message }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <form method="post" action="/category/{{ cat.id }}">
+    {{ csrfField }}
+    <h1><input name="name" type="text" value="{{ cat.name }}" style="padding: 5px"></h1>
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="submit" class="btn btn-success">Mehet</button>
+        <a href="/category/{{ cat.id }}/delete"> <button type="button" class="btn btn-danger">Delete category</button></a>
+    </div>
+    
+  </form>
+    
+</div>
+
+{% endblock %}
