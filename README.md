@@ -94,6 +94,28 @@ Egy feladathoz tartozik:
 - A node_modules a node modulokhoz tartozó file-okat
 - A public mappában vannak a weboldalon megjelenített képek, és a hozzá használt css-ek
 - A resources/views tartalmazza a nézeteket
+
 #####Fejlesztőkörnyezet bemutatása
+- NodeJs környezetben, AdonisJs MVC keretrendszerben készült.
+
 #####Telepítés lépései
+- Git repo klónozása
+- "npm install" parancs kiadása
+- "npm run dev" parancs kiadása
+
 #####Program használati útmutató
+- Ha még nem használta a programot, az első lépés a futtatás után a regisztráció:
+- Amennyiben már korábban regisztrált, jelentkezzen be:
+- Értelemszerűen adja meg a megfelelő adatokat, majd kattintson a "Mehet" gombra
+- Ezután a saját profiljára lesz átirányítva (amit bármikor elérhet a bal felső sarokban lévő logóra, vagy jobb felül a felhasználónevére kattintva)
+- Itt láthatja az ön feladatainak listáját, bármelyikre rákattintva módosíthatja azt.
+- A jobb felső sarokban találhatja a kategóriák módosítására, új Task felvételére és kijelentkezésre használatos gombokat is
+######Új Task felvétele:
+- Értelemszerűen adja meg a megfelelő adatokat, majd kattintson a "Mehet" gombra
+######Létező Task módosítása:
+- Értelemszerűen módosítsa a megfelelő adatokat, majd kattintson a "Mehet" gombra
+######Új kategória felvétele:
+- Adja meg a kategória nevét, majd kattintson a "Mehet" gombra
+######Létező kategória módosítása:
+- Módosítsa a kategória nevét, majd kattintson a "Mehet" gombra
+
