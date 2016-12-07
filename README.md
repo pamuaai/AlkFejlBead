@@ -32,9 +32,8 @@ Egy feladathoz tartozik:
 - Ergonomikus felület
 - Biztonsági funkciók (jelszavak, hozzáférés)
 
-######Használati eset diagramok
-Inline-style: 
-![alt text](https://github.com/pamuaai/readmePics/UseCase.png "Logo Title Text 1")
+######Használati eset diagramok 
+![alt text](/readmePics/UseCase.png "Logo Title Text 1")
 
 ######Szerepkörök
 - Vendég: láthatja a kezdőoldalt(bejelentkezés) és regisztrálhat
