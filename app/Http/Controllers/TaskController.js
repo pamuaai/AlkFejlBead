@@ -51,7 +51,7 @@ class TaskController {
             }
 
             console.log(task.assignUser)
-            if(task.assignUser > 0){
+            if(taskData.assignUser > 0){
                 yield task.assignees().attach([taskData.assignUser])
             }
 
