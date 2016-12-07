@@ -33,16 +33,20 @@ Egy feladathoz tartozik:
 - Biztonsági funkciók (jelszavak, hozzáférés)
 
 ######Használati eset diagramok 
-![alt text](/readmePics/UseCase.png "Logo Title Text 1")
+![alt text](/readmePics/UseCase.png "Use Case")
 
 ######Szerepkörök
 - Vendég: láthatja a kezdőoldalt(bejelentkezés) és regisztrálhat
 - Felhasználó: Új feladatokat és kategóriákat tud hozzáadni, törölni és módosítani a létezőket.
 
 ######Szakterületi fogalomjegyzék	
-	
+- Task: egy feladat
+- Category: egy kategória
+- User: egy felhasználó
 
 ######Folyamatok pontos menete	
+
+![alt text](/readmePics/flowchart.png "Flowchart")
 ######Oldaltérkép	Végpontok	
 ######Oldalvázlatok	
 ######Adatmodell	
