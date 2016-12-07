@@ -28,7 +28,11 @@
     </select>
     <div>
       <label for="status">Is it done yet?</label>
-      <input type="checkbox" name="status">
+        {% if task.done %}
+          <input type="checkbox" checked  name="status">
+        {% else %}
+          <input type="checkbox"  name="status">
+        {% endif %}
     </div>
     <label for="description" style="display: block;">Description:</label>
     <input name="description" type="text" value="{{ task.description }}" style="width: 500px;">
@@ -42,7 +46,7 @@
     </div>
 
     <select name="assignUser" style="display:block; margin-bottom: 15px;">
-          <option value="-1">Assign user to this task</option>
+          <option value=0>Assign user to this task</option>
       {% for user in usersNotAssigned %}
           <option value="{{ user.id }}">{{ user.username }}</option>
       {% endfor %}

@@ -123,3 +123,6 @@ Egy feladathoz tartozik:
 ######Létező kategória módosítása:
 - Módosítsa a kategória nevét, majd kattintson a "Mehet" gombra
 
+
+placeholder="Title goes here"
+

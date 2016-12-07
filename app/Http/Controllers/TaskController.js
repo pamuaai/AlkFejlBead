@@ -44,12 +44,18 @@ class TaskController {
             task.category_id = taskData.category_id
             task.title = taskData.title
             task.description = taskData.description
-            yield task.save()
+            if(taskData.status){
+                task.done = true
+            }else{
+                task.done = false
+            }
 
-
+            console.log(task.assignUser)
             if(task.assignUser > 0){
                 yield task.assignees().attach([taskData.assignUser])
             }
+
+            yield task.save()
         }
 
         res.redirect(`/task/${taskId}`)
