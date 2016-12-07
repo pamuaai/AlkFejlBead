@@ -68,6 +68,14 @@ Egy feladathoz tartozik:
 - /task/:id/delete               
 
 ######Oldalvázlatok	
+
+![alt text](/readmePics/screens/loginPage.png "Login")
+![alt text](/readmePics/screens/registerPage.png "Register")
+![alt text](/readmePics/screens/profile.png "User profile")
+![alt text](/readmePics/screens/taskCreate.png "Create task")
+![alt text](/readmePics/screens/taskEdit.png "Edit task")
+![alt text](/readmePics/screens/categoryList.png "List of all categories")
+![alt text](/readmePics/screens/createOrEditCategory.png "Create or edit category")
 ######Adatmodell	
 ######Adatbázisterv	
 ######Állapotdiagram (ha van értelme)	
