@@ -85,3 +85,15 @@ Egy feladathoz tartozik:
 
 #####Adatmodell	
 ![alt text](/readmePics/DataModel.png "Create or edit category")
+
+
+#####Mappák funkiójának bemutatása
+- Az App/Http mappa tartalmazza a Controller-eket, és a routes.js-tu
+- Az App/Model az adatbázismodellek leírását tartalmazza, a táblák kapcsolatai itt vannak megadva
+- A database/migrations a migrációkat tartalmazza
+- A node_modules a node modulokhoz tartozó file-okat
+- A public mappában vannak a weboldalon megjelenített képek, és a hozzá használt css-ek
+- A resources/views tartalmazza a nézeteket
+#####Fejlesztőkörnyezet bemutatása
+#####Telepítés lépései
+#####Program használati útmutató

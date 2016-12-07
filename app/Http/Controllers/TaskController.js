@@ -47,7 +47,7 @@ class TaskController {
             yield task.save()
 
 
-            if(task.assignUser !== "-1"){
+            if(task.assignUser > 0){
                 yield task.assignees().attach([taskData.assignUser])
             }
         }
