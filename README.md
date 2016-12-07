@@ -85,5 +85,3 @@ Egy feladathoz tartozik:
 
 #####Adatmodell	
 ![alt text](/readmePics/DataModel.png "Create or edit category")
-#####Adatbázisterv	
-#####Állapotdiagram (ha van értelme)	
