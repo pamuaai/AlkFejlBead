@@ -84,5 +84,6 @@ Egy feladathoz tartozik:
 ![alt text](/readmePics/screens/createOrEditCategory.png "Create or edit category")
 
 #####Adatmodell	
+![alt text](/readmePics/DataModel.png "Create or edit category")
 #####Adatbázisterv	
 #####Állapotdiagram (ha van értelme)	
