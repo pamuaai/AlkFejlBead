@@ -32,17 +32,20 @@ Egy feladathoz tartozik:
 - Ergonomikus felület
 - Biztonsági funkciók (jelszavak, hozzáférés)
 
-######Használatieset-modell
-Szerepkörök:
+######Használati eset diagramok
+Inline-style: 
+![alt text](https://github.com/pamuaai/readmePics/UseCase.png "Logo Title Text 1")
+
+######Szerepkörök
 - Vendég: láthatja a kezdőoldalt(bejelentkezés) és regisztrálhat
 - Felhasználó: Új feladatokat és kategóriákat tud hozzáadni, törölni és módosítani a létezőket.
 
-###### Szakterületi fogalomjegyzék	
-###### Szerepkörök	
-###### Használati eset diagramok	
-###### Folyamatok pontos menete	
-###### Oldaltérkép	Végpontok	
-###### Oldalvázlatok	
-###### Adatmodell	
-###### Adatbázisterv	
-###### Állapotdiagram (ha van értelme)	
+######Szakterületi fogalomjegyzék	
+	
+
+######Folyamatok pontos menete	
+######Oldaltérkép	Végpontok	
+######Oldalvázlatok	
+######Adatmodell	
+######Adatbázisterv	
+######Állapotdiagram (ha van értelme)	
