@@ -39,5 +39,4 @@ Route.post('/task/create', 'TaskController.doCreate')
 Route.get('/task/:id', 'TaskController.show')
 Route.post('/task/:id/edit', 'TaskController.doEdit')
 Route.get('/task/:id/delete', 'TaskController.doDelete')
-// Route.on('/').render('welcome')
  

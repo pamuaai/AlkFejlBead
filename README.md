@@ -48,6 +48,25 @@ Egy feladathoz tartozik:
 
 ![alt text](/readmePics/flowchart.png "Flowchart")
 ######Oldaltérkép	Végpontok	
+- /               
+- /register               
+- /register               
+- /login               
+- /login               
+- /logout               
+- /user/:id               
+- /category/create               
+- /category/create               
+- /category/list               
+- /category/:id               
+- /category/:id               
+- /category/:id/delete               
+- /task/create               
+- /task/create               
+- /task/:id               
+- /task/:id/edit               
+- /task/:id/delete               
+
 ######Oldalvázlatok	
 ######Adatmodell	
 ######Adatbázisterv	
