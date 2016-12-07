@@ -110,12 +110,16 @@ Egy feladathoz tartozik:
 - Ezután a saját profiljára lesz átirányítva (amit bármikor elérhet a bal felső sarokban lévő logóra, vagy jobb felül a felhasználónevére kattintva)
 - Itt láthatja az ön feladatainak listáját, bármelyikre rákattintva módosíthatja azt.
 - A jobb felső sarokban találhatja a kategóriák módosítására, új Task felvételére és kijelentkezésre használatos gombokat is
+
 ######Új Task felvétele:
 - Értelemszerűen adja meg a megfelelő adatokat, majd kattintson a "Mehet" gombra
+
 ######Létező Task módosítása:
 - Értelemszerűen módosítsa a megfelelő adatokat, majd kattintson a "Mehet" gombra
+
 ######Új kategória felvétele:
 - Adja meg a kategória nevét, majd kattintson a "Mehet" gombra
+
 ######Létező kategória módosítása:
 - Módosítsa a kategória nevét, majd kattintson a "Mehet" gombra
 
