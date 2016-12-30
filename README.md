@@ -140,3 +140,6 @@ Egy feladathoz tartozik:
 
 ######Kategória törlése Ajax-szal
 - A törlés gombra kattintva egy Ajax kérést küldünk, ami törli a kategóriát
+
+######Kliensoldali form validálás
+- A formokat kliensoldalon validálja
