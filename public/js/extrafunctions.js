@@ -3,6 +3,11 @@ $(document).ready(function(){
     //vakok-és-gyengénlátóknak gomb kattintása
     
     $("#vakok-es-gyengenlatok").click(function(){
+        if(localStorage.getItem("vegyl") < 0){
+            localStorage.setItem("vegyl", 1);
+        }else{
+            localStorage.setItem("vegyl", -1);
+        }
         setcolour();
 	});
 
@@ -58,7 +63,6 @@ function setcolour(){
         $(".navbar-brand img").attr("src","/assets/logo_horiz2.png");
         $("#vakok-es-gyengenlatok img").attr("src","/assets/vakok-es-gyengenlatok2.jpg");
 
-        localStorage.setItem("vegyl", -1);
     }else{
         $("*").css({
             "background": "#ffffff",
@@ -66,6 +70,5 @@ function setcolour(){
         });
         $(".navbar-brand img").attr("src","/assets/logo_horiz1.png");
         $("#vakok-es-gyengenlatok img").attr("src","/assets/vakok-es-gyengenlatok.jpg");
-        localStorage.setItem("vegyl", 1);
     }
 }
