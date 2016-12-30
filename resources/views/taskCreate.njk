@@ -15,15 +15,21 @@
 
   <form method="post" action="/task/create">
     {{ csrfField }}
+    <div class="form-group">
     <h1><input name="title" type="text" value="Task Title goes here" style="padding: 5px"></h1>
+    <div class="help-block with-errors"></div>
+    </div>
     <label for="category_id">Category:</label>
     <select name="category_id">
       {% for category in categories %}
           <option value="{{ category.id }}">{{ category.name }}</option>
       {% endfor %}
     </select>
+    <div class="form-group">
     <label for="description" style="display: block;">Description:</label>
     <input name="description" type="text" value="Description goes here" style="width: 500px;">
+    <div class="help-block with-errors"></div>
+    </div>
     <input type="submit" value="Mehet" style="display: block; margin: 5px 0;">
   </form>
 </div>
