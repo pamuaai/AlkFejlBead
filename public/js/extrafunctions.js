@@ -3,9 +3,6 @@ $(document).ready(function(){
     //vakok-és-gyengénlátóknak gomb kattintása
     
     $("#vakok-es-gyengenlatok").click(function(){
-        vegyl = -1*localStorage.getItem("vegyl");
-        // console.log(vegyl);
-        localStorage.setItem("vegyl", vegyl);
         setcolour();
 	});
 
@@ -30,9 +27,8 @@ $(document).ready(function(){
     $("#deletebutton").on('submit', function (ev) {
         ev.preventDefault();
         // alert('Ajaxin')
-        var url = '/ajax' + $(this).attr('href');
+        var url = '/ajax' + $(this).attr('action');
         alert('url');
-        var _resolve = function () {
             const headers = {
                 'csrf-token': $('[name="_csrf"]').val()
             }
@@ -49,9 +45,6 @@ $(document).ready(function(){
                 .fail(function (err) {
                     $('.help-block').text(err)
                 })
-        }
-
-        
     }) ;
     
 });
@@ -64,6 +57,8 @@ function setcolour(){
         });
         $(".navbar-brand img").attr("src","/assets/logo_horiz2.png");
         $("#vakok-es-gyengenlatok img").attr("src","/assets/vakok-es-gyengenlatok2.jpg");
+
+        localStorage.setItem("vegyl", -1);
     }else{
         $("*").css({
             "background": "#ffffff",
@@ -71,5 +66,6 @@ function setcolour(){
         });
         $(".navbar-brand img").attr("src","/assets/logo_horiz1.png");
         $("#vakok-es-gyengenlatok img").attr("src","/assets/vakok-es-gyengenlatok.jpg");
+        localStorage.setItem("vegyl", 1);
     }
 }
