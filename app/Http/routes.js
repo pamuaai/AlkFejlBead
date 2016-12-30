@@ -43,5 +43,6 @@ Route.get('/task/:id/delete', 'TaskController.doDelete')
 Route.group('ajax', function () {
     Route.get('/task/motivate', 'TaskController.motivate')
     Route.delete('/task/:id/delete', 'TaskController.doAjaxDelete')
+    Route.delete('/category/:id/delete', 'CategoryController.doAjaxDelete')
  }).prefix('/ajax')
  

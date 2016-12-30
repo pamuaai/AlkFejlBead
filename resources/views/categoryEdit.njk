@@ -13,16 +13,20 @@
   </div>
   {% endif %}
 
-  <form method="post" action="/category/{{ cat.id }}">
+  <form method="post" action="/category/{{ cat.id }}" data-toggle="validator">
     {{ csrfField }}
-    <h1><input name="name" type="text" value="{{ cat.name }}" style="padding: 5px"></h1>
+    <h1><input name="name" type="text" value="{{ cat.name }}" style="padding: 5px" required></h1>
     <div class="btn-group" role="group" aria-label="...">
         <button type="submit" class="btn btn-success">Mehet</button>
-        <a href="/category/{{ cat.id }}/delete"> <button type="button" class="btn btn-danger">Delete category</button></a>
+        
     </div>
     
   </form>
     
+  <form action="/category/{{ cat.id }}/delete" method="POST" id="deletebutton">
+    {{ csrfField }}
+    <button type="submit" class="btn btn-danger">Delete category</a>
+  </form>
 </div>
 
 {% endblock %}

@@ -84,6 +84,17 @@ class CategoryController {
 
         res.redirect('/category/list')
     }
+
+    * doAjaxDelete (req, res) {
+        const cat = yield Category.find(req.param('id'))
+
+        yield cat.delete()
+        console.log('deleted');
+         res.ok({
+             success: true,
+             redurl: `/category/list`
+         })
+    }
 }
 
 module.exports = CategoryController

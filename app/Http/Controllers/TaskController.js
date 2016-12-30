@@ -109,12 +109,12 @@ class TaskController {
 
         res.redirect(`/user/${req.currentUser.id}`)
     }
-    
+
     * doAjaxDelete (req, res) {
         const task = yield Task.find(req.param('id'))
 
         yield task.delete()
-        alert('deleted');
+        console.log('deleted');
          res.ok({
              success: true,
              redurl: `/user/${req.currentUser.id}`
