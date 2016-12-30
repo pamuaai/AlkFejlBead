@@ -124,5 +124,10 @@ Egy feladathoz tartozik:
 - Módosítsa a kategória nevét, majd kattintson a "Mehet" gombra
 
 
-placeholder="Title goes here"
+#####Javascriptes extra dolgok
+
+######Színváltás gyengénlátóknak
+- Háttér színét cseréljük feketére
+- Szöveg színe legyen fehér
+- A logó és a gomb színeit invertáljuk
 
