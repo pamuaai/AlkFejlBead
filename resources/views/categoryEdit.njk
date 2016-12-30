@@ -15,10 +15,12 @@
 
   <form method="post" action="/category/{{ cat.id }}" data-toggle="validator">
     {{ csrfField }}
+    <div class="form-group">
     <h1><input name="name" type="text" value="{{ cat.name }}" style="padding: 5px" required></h1>
+    <div class="help-block with-errors"></div>
+    </div>
     <div class="btn-group" role="group" aria-label="...">
         <button type="submit" class="btn btn-success">Mehet</button>
-        
     </div>
     
   </form>

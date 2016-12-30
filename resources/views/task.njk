@@ -15,7 +15,10 @@
 
   <form method="post" action="/task/{{ task.id }}/edit" data-toggle="validator">
     {{ csrfField }}
+    <div class="form-group">
     <h1><input name="title" type="text" value="{{ task.title }}" style="padding: 5px" required><small> Created by: {{ task.creator.username }} </small></h1>
+    <div class="help-block with-errors"></div>
+    </div>
     <label for="category_id">Category:</label>
     <select name="category_id">
       {% for category in categories %}
@@ -36,8 +39,11 @@
         {% endif %}
       
     </div>
-    <label for="description" style="display: block;">Description:</label>
-    <input name="description" type="text" value="{{ task.description }}" style="width: 500px;" required>
+    <div class="form-group">
+      <label for="description" style="display: block;">Description:</label>
+      <input name="description" type="text" value="{{ task.description }}" style="width: 500px;" required>
+      <div class="help-block with-errors"></div>
+    </div>
     <div class="list-group" style=" margin: 15px 0;">
         <a href="#" class="list-group-item active">
             Users assigned:
