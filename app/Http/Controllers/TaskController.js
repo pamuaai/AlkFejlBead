@@ -109,6 +109,17 @@ class TaskController {
 
         res.redirect(`/user/${req.currentUser.id}`)
     }
+    
+    * doAjaxDelete (req, res) {
+        const task = yield Task.find(req.param('id'))
+
+        yield task.delete()
+        alert('deleted');
+         res.ok({
+             success: true,
+             redurl: `/user/${req.currentUser.id}`
+         })
+    }
 
     * motivate (req, res) {
         const msgno = Math.floor((Math.random() * 10));

@@ -19,16 +19,40 @@ $(document).ready(function(){
         .done(function (json) {
             if (json.success) {
                 alert(json.message);
-                // $('.navbar').load('/ .navbar .container-fluid', function () {
-                //     $loginModal.modal('hide')
-                // })
             } else {
                 alert("Something went wrong... this isn't very motivational... :( )")
             }
         })
     });
-    
 
+
+
+    $("#deletebutton").on('submit', function (ev) {
+        ev.preventDefault();
+        // alert('Ajaxin')
+        var url = '/ajax' + $(this).attr('href');
+        alert('url');
+        var _resolve = function () {
+            const headers = {
+                'csrf-token': $('[name="_csrf"]').val()
+            }
+            
+            $.ajax({
+                url,
+                method: 'DELETE',
+                dataType: 'json',
+                headers
+            })
+                .done(function (data) {
+                    location.assign(data.redurl)
+                })
+                .fail(function (err) {
+                    $('.help-block').text(err)
+                })
+        }
+
+        
+    }) ;
     
 });
 

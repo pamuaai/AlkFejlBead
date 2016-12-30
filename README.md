@@ -132,6 +132,11 @@ Egy feladathoz tartozik:
 - A logó és a gomb színeit invertáljuk
 
 ######Motiváció
-- Ha egy feladathoz nincs kedvünk, rákattinthatunk a "Motiváció" gombra
+- Ha egy feladathoz nincs kedvünk, rákattinthatunk a "Motivate me!" gombra
 - Ez egy Ajax kéréssel egy rövid motivációs szöveget jelenít meg
 
+######Feladat törlése Ajax-szal
+- A törlés gombra kattintva egy Ajax kérést küldünk, ami törli a feladatot
+
+######Kategória törlése Ajax-szal
+- A törlés gombra kattintva egy Ajax kérést küldünk, ami törli a kategóriát
