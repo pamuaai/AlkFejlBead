@@ -33,7 +33,7 @@ $(document).ready(function(){
         ev.preventDefault();
         // alert('Ajaxin')
         var url = '/ajax' + $(this).attr('action');
-        alert('url');
+        // alert('url');
             const headers = {
                 'csrf-token': $('[name="_csrf"]').val()
             }
