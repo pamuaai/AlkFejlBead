@@ -32,7 +32,9 @@
           <input type="checkbox" checked  name="status">
         {% else %}
           <input type="checkbox"  name="status">
+          <button type="button" id="motivate" class="btn btn-success" style="margin-left:10px">Motivate me!</button>
         {% endif %}
+      
     </div>
     <label for="description" style="display: block;">Description:</label>
     <input name="description" type="text" value="{{ task.description }}" style="width: 500px;">

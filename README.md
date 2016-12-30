@@ -131,3 +131,7 @@ Egy feladathoz tartozik:
 - Szöveg színe legyen fehér
 - A logó és a gomb színeit invertáljuk
 
+#####Motiváció
+- Ha egy feladathoz nincs kedvünk, rákattinthatunk a "Motiváció" gombra
+- Ez egy Ajax kéréssel egy rövid motivációs szöveget jelenít meg
+

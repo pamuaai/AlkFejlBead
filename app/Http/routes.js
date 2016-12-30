@@ -39,4 +39,8 @@ Route.post('/task/create', 'TaskController.doCreate')
 Route.get('/task/:id', 'TaskController.show')
 Route.post('/task/:id/edit', 'TaskController.doEdit')
 Route.get('/task/:id/delete', 'TaskController.doDelete')
+
+Route.group('ajax', function () {
+    Route.get('/task/motivate', 'TaskController.motivate')
+ }).prefix('/ajax')
  

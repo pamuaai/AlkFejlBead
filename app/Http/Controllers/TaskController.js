@@ -110,7 +110,20 @@ class TaskController {
         res.redirect(`/user/${req.currentUser.id}`)
     }
 
-
+    * motivate (req, res) {
+        const msgno = Math.floor((Math.random() * 10));
+        const msgs = [  "You can do it!",
+                        "I believe in you!",
+                        "Get off yer lazy ass and get to work!",
+                        "Do, or do not, there is no try.",
+                        "Don't be a lazy cunt, mate!",
+                        "Dude, sucking at something is the first step to becoming sorta good at something",
+                        "Responsiblity demands sacrifice",
+                        "You're getting all hung up, all hung up on imaginary problems. You gotta focus on what's real, man. ",
+                        "With great power comes great responsibility",
+                        "Do it, just do it! Don’t let your dreams be dreams. Yesterday you said tomorrow. So just do it! Make your dreams come true. Just do it. Some people dream of success, while you’re going to wake up and work hard at it. Nothing is impossible… you should get to the point where anyone else would quit and you’re not going to stop there. NO! What are you waiting for?! DO IT! JUST DO IT! YES YOU CAN! JUST DO IT! If you’re tired of starting over, stop giving up."];
+        res.ok({ success: true , message: msgs[msgno]});
+    }
 }
 
 module.exports = TaskController
